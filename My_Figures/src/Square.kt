@@ -37,6 +37,6 @@ class Square(var x: Int, var y: Int, var side: Int): Movable, Figure(0)  {
     }
 
     override fun toString(): String {
-        return "Square. X: ${this.x}, Y: ${this.y}, Side: ${this.side}}"
+        return "Square. X: ${this.x}, Y: ${this.y}, Side: ${this.side}"
     }
 }

@@ -1,6 +1,6 @@
 import kotlin.math.PI
 
-class Circle(var centerX: Int, var centerY: Int, var radius: Int) : Figure(0) {
+class Circle(var centerX: Int, var centerY: Int, var radius: Int) : Movable, Figure(0) {
     override fun area(): Float {
         return (PI * radius * radius).toFloat();
     }
@@ -40,6 +40,11 @@ class Circle(var centerX: Int, var centerY: Int, var radius: Int) : Figure(0) {
     }
 
     override fun toString(): String {
-        return "Circle. Center X: ${this.centerX}, Center Y: ${this.centerY}, Radius: ${this.radius}}"
+        return "Circle. Center X: ${this.centerX}, Center Y: ${this.centerY}, Radius: ${this.radius}"
+    }
+
+    override fun move(dx: Int, dy: Int) {
+        this.centerX += dx
+        this.centerY += dy
     }
 }
